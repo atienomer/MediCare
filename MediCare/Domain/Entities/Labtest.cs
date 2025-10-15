@@ -4,8 +4,8 @@ namespace MediCare.Domain.Entities
 {
     public class Labtest : BaseEntity
     {
-        public string TestName { get; set; } 
-        public string Description { get; set; }
+        public string TestName { get; set; }= string.Empty;
+        public string Description { get; set; } = string.Empty;
         public decimal Cost { get; set; }
         public ICollection<Nurse> Nurse { get; set; } = new List<Nurse>();//list of nurse associated with the labtest
         public Labtest(string testName, string description, decimal cost)
