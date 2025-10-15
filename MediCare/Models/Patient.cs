@@ -1,6 +1,6 @@
 ﻿namespace MediCare.Models;
 
-public class MediDatabase
+public class Patient
 {
     public Guid Id { get; set; }
     public string FirstName { get; set; } = string.Empty;
@@ -8,7 +8,7 @@ public class MediDatabase
     public DateTime DateOfBirth { get; set; }
     public string PhoneNumber { get; set; }= string.Empty;
     public string Email { get; set; } = string.Empty; 
-    public MediDatabase(Guid id, string firstName, string lastName, DateTime dateOfBirth, string phoneNumber, string email)
+    public Patient(Guid id, string firstName, string lastName, DateTime dateOfBirth, string phoneNumber, string email)
     {
         Id = id;
         FirstName = firstName;
@@ -17,12 +17,12 @@ public class MediDatabase
         PhoneNumber = phoneNumber;
         Email = email;
     }
-    public MediDatabase() 
+    public Patient() 
     {
     }
-    public static MediDatabase Create(string firstName, string lastName, DateTime dateOfBirth, string phoneNumber, string email)
+    public static Patient Create(string firstName, string lastName, DateTime dateOfBirth, string phoneNumber, string email)
     {
-        return new MediDatabase
+        return new Patient
         {
             Id = Guid.NewGuid(),
             FirstName = firstName,

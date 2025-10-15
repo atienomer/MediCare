@@ -19,7 +19,9 @@ namespace MediCare.Domain.Entities
             PhoneNumber = phoneNumber;
             Email = email;
         }
-    } public Patient()
+    }
+       public Patient()
         {
         }
     }
+}
