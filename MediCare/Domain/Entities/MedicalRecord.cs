@@ -1,6 +1,6 @@
 ﻿namespace MediCare.Domain.Entities
 {
-    public class MedicalRecord
+    public class MedicalRecord: Shared.BaseEntity
     {
       
         public string Diagnosis { get; set; } 

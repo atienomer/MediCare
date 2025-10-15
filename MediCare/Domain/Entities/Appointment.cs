@@ -2,7 +2,7 @@
 
 namespace MediCare.Domain.Entities
 {
-    public class Appointment
+    public class Appointment: Shared.BaseEntity
     {
         public DateTime AppointmentDate { get; set; }
         public string Reason { get; set; }

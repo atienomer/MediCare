@@ -1,6 +1,6 @@
 ﻿namespace MediCare.Domain.Entities
 {
-    public class Medication
+    public class Medication:Shared.BaseEntity
     {
         public string Name { get; set; } 
         public string Dosage { get; set; } 
