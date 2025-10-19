@@ -6,18 +6,22 @@ namespace MediCare.Domain.Entities
     public class Department : BaseEntity
     {
         public string DepartmentName { get; set; } = string.Empty;
-        public int DepartmentId { get; set; }
-        public ICollection<Specialty>Specialties { get; set; } = new List<Specialty>();
-        public Department(string departmentName,int departmentId)
+
+        // A department can have multiple specialties
+        public ICollection<Doctor> Doctors { get; set; } = new List<Doctor>();
+
+        // Constructor with parameters
+        public Department(string departmentName)
         {
             DepartmentName = departmentName;
-            DepartmentId = departmentId;
         }
-    
-       public Department()
+
+        // Default constructor
+        public Department()
         {
         }
     }
 }
+
 
 

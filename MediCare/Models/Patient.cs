@@ -212,4 +212,49 @@ public class Appointment
             Reason = reason
         };
     }
+    public class Department
+    {
+        public Guid Id { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string Location { get; set; } = string.Empty;
+        public Department(Guid id, string name, string location)
+        {
+            Id = id;
+            Name = name;
+            Location = location;
+        }
+        public Department()
+        {
+        }
+        public static Department Create(string name, string location)
+        {
+            return new Department
+            {
+                Id = Guid.NewGuid(),
+                Name = name,
+                Location = location
+            };
+        }
+    }
+    public class Specialty
+    {
+        public Guid Id { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public Specialty(Guid id, string name)
+        {
+            Id = id;
+            Name = name;
+        }
+        public Specialty()
+        {
+        }
+        public static Specialty Create(string name)
+        {
+            return new Specialty
+            {
+                Id = Guid.NewGuid(),
+                Name = name
+            };
+        }
+    }
 }
